@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. What is answer to the expression: 1+5+7-2=?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q1Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question1"
+                        android:text="15"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q1Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question1"
+                        android:text="17"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q1Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question1"
+                        android:text="13"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q1Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question1"
+                        android:text="18"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2. Who is not Chinese?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q2Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question2"
+                        android:text="Xi Jinping"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q2Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question2"
+                        android:text="Mao Zedong"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q2Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question2"
+                        android:text="Rodrigo Duterte"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q2Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question2"
+                        android:text="Jack Ma"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3. Which is not a primary color? "
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q3Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question3"
+                        android:text="Blue"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q3Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question3"
+                        android:text="Green"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q3Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question3"
+                        android:text="Red"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q3Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question3"
+                        android:text="Yellow"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4. Who is the first president of the   Philippines?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q4Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question4"
+                        android:text="Emilio Aguinaldo"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q4Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question4"
+                        android:text="Jose Rizal"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q4Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question4"
+                        android:text="Andres Bonifacio"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q4Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question4"
+                        android:text="Rodrigo Duterte"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5. What is the answer to the expression: 5-5-7+7= ?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q5Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question5"
+                        android:text="0"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q5Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question5"
+                        android:text="14"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q5Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question5"
+                        android:text="2"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q5Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question5"
+                        android:text="-10"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6. Which is not a proper job?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q6Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question6"
+                        android:text="Fast-food Cashier"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q6Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question6"
+                        android:text="Bank Robber"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q6Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question6"
+                        android:text="Janitor"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q6Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question6"
+                        android:text="Government Official"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQ7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/Q7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7. How many questions are in this quiz?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/Q7Choice1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question7"
+                        android:text="6"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q7Choice2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question7"
+                        android:text="4"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q7Choice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question7"
+                        android:text="5"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/Q7Choice4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="Question7"
+                        android:text="7"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:elevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:elevation="20dp"
+                        android:gravity="center|center_horizontal"
+                        android:onClick="Submit"
+                        android:text="Submit"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:elevation="20dp"
+                        android:gravity="center|center_horizontal"
+                        android:text="Score:"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/output"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="20dp"
+                        android:gravity="center|center_horizontal"
+                        android:onClick="Output"
+                        android:text="Output"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

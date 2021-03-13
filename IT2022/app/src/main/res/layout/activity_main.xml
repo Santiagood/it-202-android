@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        style="@android:style/Widget.Material.Light.ScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:scrollbarStyle="insideOverlay"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputFirstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter your first name:"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inputLastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter your Last name:"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inputNumberOfHoursWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter number of hours work:"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inputRatePerHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter rate per hour:"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inputOvertime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter how many overtime you do:"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/compute"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="computeOutput"
+                android:text="Compute" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.496">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/outputNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your name is:" />
+
+            <TextView
+                android:id="@+id/outputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputNumberOfHoursWorkTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of hours work:" />
+
+            <TextView
+                android:id="@+id/outputNumberOfHoursWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputRatePerHourTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate per hour:" />
+
+            <TextView
+                android:id="@+id/outputRatePerHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputSalaryTItle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salary:" />
+
+            <TextView
+                android:id="@+id/outputSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputOvertimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Overtime pay:" />
+
+            <TextView
+                android:id="@+id/outputOvertime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputTaxTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tax:" />
+
+            <TextView
+                android:id="@+id/outputTax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputSSSTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SSS:" />
+
+            <TextView
+                android:id="@+id/outputSSS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputPagibigTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pag-ibig:" />
+
+            <TextView
+                android:id="@+id/outputPagbig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputTotaldeductionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Deduction:" />
+
+            <TextView
+                android:id="@+id/outputTotaldeduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/outputTotalsalaryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Salary:" />
+
+            <TextView
+                android:id="@+id/outputTotalsalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4E4E4" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <TextView
+        android:id="@+id/ouputWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to home! "
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <TextView
+        android:id="@+id/outputUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your username: "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/outputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/ouputWelcome"
+        app:layout_constraintStart_toStartOf="@+id/ouputWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/ouputWelcome" />
+
+    <TextView
+        android:id="@+id/outputPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="184dp"
+        android:text="Your password:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/outputUsername"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/outputUsername" />
+</androidx.constraintlayout.widget.ConstraintLayout>

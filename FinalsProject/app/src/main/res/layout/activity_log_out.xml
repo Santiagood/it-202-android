@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogOut">
+
+    <TextView
+        android:id="@+id/loginAgain"
+        android:layout_width="336dp"
+        android:layout_height="256dp"
+        android:layout_margin="10dp"
+        android:padding="25dp"
+        android:text="Thank You for using our service."
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Transact"
+        android:padding="25dp"
+        android:text="Log in Again"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loginAgain"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/loginAgain"
+        app:layout_constraintTop_toBottomOf="@+id/loginAgain"
+        app:layout_constraintVertical_bias="0.483" />
+</androidx.constraintlayout.widget.ConstraintLayout>
